@@ -20,5 +20,7 @@ namespace Foodit.Api.Models
         public string UserEmail { get; set;}
 
         public List<Item> UserItems { get; set;}
+
+        public List<Transaction> Transactions {get;set;}
     }
 }
