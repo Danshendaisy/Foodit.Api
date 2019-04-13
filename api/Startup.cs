@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Foodit.Api.Data;
 
 namespace Foodit.Api
 {
@@ -30,6 +31,8 @@ namespace Foodit.Api
         {
             services.AddDbContext<UserContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("FooditConnection")));
+            // services.AddDbContext<UserContext>(options =>
+            // options.UseNpgsql(Configuration.GetConnectionString("UserContext")));
             // services.AddDbContext<ItemContext>(options =>
             // options.UseNpgsql(Configuration.GetConnectionString("FooditConnection")));
             services.AddMvc();
